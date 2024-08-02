@@ -1,0 +1,55 @@
+[alias]
+	co = checkout
+	br = branch
+	df = diff
+	sw = switch
+	st = status
+	pro = remote prune origin
+	subu = submodule update --recursive
+	fe = fetch
+	puf = pull --ff-only
+	pur = pull --rebase
+	pu = pur
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+[core]
+	editor = subl -n -w
+  pager = delta
+[delta]
+    features = side-by-side line-numbers decorations collared-trogon
+    whitespace-error-style = 22 reverse
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+#[include]
+#    path = ~/Documents/Git/delta/themes.gitconfig
+[interactive]
+    diffFilter = delta --color-only
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[core] 
+    packedGitLimit = 512m 
+    packedGitWindowSize = 512m 
+[pack] 
+    deltaCacheSize = 2047m 
+    packSizeLimit = 2047m 
+    windowMemory = 2047m
+[http]
+    postBuffer = 157286400
+[fetch]
+    output = full
+[core]
+	compression = 1
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[user]
+	email = vin.cf@veryfast.biz
+	name = vin-cf
