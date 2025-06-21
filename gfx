@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mode=""
+
+if [[ "$1" == "-i" ]]; then
+    mode="Integrated"
+elif [[ "$1" == "-h" ]]; then
+    mode="Hybrid"
+else
+    supergfxctl --get
+    exit 1 
+fi
+
+supergfxctl --mode "$mode"
+
